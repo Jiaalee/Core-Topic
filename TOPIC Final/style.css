@@ -1,0 +1,343 @@
+#mainpage {
+    font-family: "Inter";
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-self: center;
+    width: 100%;
+    color: black;
+    position: relative;
+    align-content: center;
+}
+
+.main {
+    font-size: 70px;
+    text-decoration: none;
+    color: black;
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    margin-left: 50px
+}
+
+.file {
+
+    width: 21%;
+    height: 70%;
+        display: flex; /* Allow .file to be flex item */
+        flex-shrink: 0; /* Prevent shrinking of .file */ /* Optional: add spacing between .file and other elements */
+    position: relative;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header.A .main,
+.header.C .main,
+.header.E  .main{
+    left: -150px;
+}
+
+.header.A .class,
+.header.C .class,
+.header.E .class {
+    left: 200px;
+}
+
+.header.C .class {
+    top: -100px;
+}
+
+.header.B .class,
+.header.D .class {
+    right: 300px;
+
+}
+
+.class, .main {
+    line-height: normal;
+    margin: 20px;
+}
+/* Flex container styles for .header */
+.header {
+    display: flex;
+    width: 90%;
+    height: 150px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 0;
+    margin: 30px;
+}
+
+/* Align .header.A, .header.C, and .header.E to the start */
+.header.A,
+.header.C,
+.header.E {
+    justify-content: flex-start; /* Align items to the start (left) */
+    flex-direction: row;
+    float: left;
+}
+
+/* Align .header.B and .header.D to the end */
+.header.B,
+.header.D {
+    justify-content: flex-start; /* Align items to the end (right) */
+    flex-direction: row-reverse;
+    float: right;
+}
+
+/* The remaining .header styles */
+.header.A, .header.B, .header.C, .header.D, .header.E {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.bold {
+    font-weight: normal; /* Default font weight */
+}
+
+.italic, .iitalic{
+    font-style: normal; /* Default font style */
+}
+
+.merge {
+    filter: blur(0); /* Default line height */
+    
+}
+
+.outline {
+    color: black; /* Default color */
+    -webkit-text-stroke: 0px; /* Default stroke */
+}
+
+.merge.active {
+    filter: blur(2px); /* Apply blur on active */
+}
+
+.outline.active {
+    color: transparent;
+    -webkit-text-stroke: 3px black; /* Outline on active */
+}
+
+.bold.active {
+    font-weight: bold; /* Bold text on hover */
+}
+
+.italic.active {
+    font-style: italic; /* Italic text on hover */
+}
+
+.iitalic.active {
+    font-style: italic; /* Italic text for iitalic */
+}
+
+
+
+.class {
+    position: absolute; /* Absolute positioning */
+    top: -5vw; /* Adjust vertical position */
+    z-index: 2;
+    font-size: 40px;
+}
+
+@media (max-width: 1224px) {
+    .header {
+        transform: scaleX(0.75); /* More extreme compression on medium screens */
+    }
+
+    .file {
+        transform: scaleX(0.75); /* Apply stronger compression to .file */
+    }
+
+    .main {
+        font-size: 60px;
+        transform: scaleX(0.75); /* Apply compression to .main */
+    }
+
+    .class {
+        font-size: 35px;
+        transform: scaleX(0.75); /* Apply compression to .class */
+    }
+
+    .front {
+        transform: scaleX(0.75);
+        font-size: 80px; 
+    }
+
+    .iimg {
+        transform: scaleX(0.75);
+    }
+
+    .container {
+        transform: scaleX(0.75);
+    }
+
+    .content {
+        transform: scaleX(0.75);
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 824px) {
+    .header {
+        transform: scaleX(0.30); /* Slightly compress the header on medium screens */
+    }
+
+    .file {
+        transform: scaleX(0.30); /* Apply slight compression to .file */
+    }
+
+    .main {
+        font-size: 60px;
+        transform: scaleX(0.30); /* Apply compression to .main */
+    }
+
+    .class {
+        font-size: 35px;
+        transform: scaleX(0.30); /* Apply compression to .class */
+    }
+
+    .front {
+        transform: scaleX(0.30);
+
+    }
+
+    .iimg {
+        transform: scaleX(0.30);
+    }
+
+    .container {
+        transform: scaleX(0.30);
+    }
+
+    .content {
+        transform: scaleX(0.30);
+}
+}
+
+.front {
+    font-family: "Inter";
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1000px;
+    margin-bottom: 200px;
+    justify-content: center;
+    
+}
+
+.Artwork {
+    font-size: 100px;
+    display: inline-block;
+margin-top: 100px;
+}
+
+.main span {
+    margin: 0;  /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    white-space: nowrap; /* Ensure no unwanted wrapping or spacing */
+}
+
+.front img {
+    position: relative;
+    height: auto;
+    width: 400px;
+    float: right;
+    top: 80px;
+    margin-left: 150px;
+}
+
+.distort-image {
+    width: 400px; /* Set your image size */
+    height: auto;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+    object-fit: cover;
+}
+
+.hidden {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.under {
+    visibility: hidden;
+    position: absolute;
+}
+
+.tt {
+    font-family: "inter";
+    font-size: 32px;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    line-height: 1.6;
+}
+
+.tt p {
+    position: relative;
+}
+
+.iimg {
+    flex-wrap: nowrap;
+    display: flex;
+    width: 700px;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.iimg img {
+    width: 650px;;
+}
+
+html {
+    transition: transform 0.3s ease-in-out;
+}
+
+body {
+    transition: transform 0.3s ease-in-out;
+}
+
+.condensed {
+    transform: scaleY(0.3); /* Condenses the entire page */
+    transform-origin: top center; /* Keeps the page starting from the top center when condensed */
+}
+
+ img {
+    height: auto;
+    transition: transform 0.3s ease-out, filter 0.3s ease-out; /* Smooth transition */
+}
+
+.distort-image:hover {
+    transform: scale(1.1) rotate(5deg) skew(5deg); /* Distort image */
+    filter: blur(4px); /* Apply blur on hover */
+}
+
+.distort-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out, filter 0.3s ease-out; /* Smooth transition */
+}
